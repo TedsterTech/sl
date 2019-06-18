@@ -82,6 +82,8 @@ void option(char *str)
 
 int main(int argc, char *argv[])
 {
+  for(;;)
+  {
     int x, i;
 
     for (i = 1; i < argc; ++i) {
@@ -112,10 +114,11 @@ int main(int argc, char *argv[])
         usleep(40000);
     }
     mvcur(0, COLS - 1, LINES - 1, 0);
+    }
     endwin();
 
     return 0;
-}
+  }
 
 
 int add_sl(int x)
